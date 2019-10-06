@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <data>
+        <variable name="photo" type="com.example.flyker.modele.Photo" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ui.main.MainFragment">
+
+    <TextView
+        android:id="@+id/imageTitle"
+        android:layout_width="155dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="84dp"
+        android:foregroundGravity="center_vertical|center|center_horizontal"
+        android:text="@{photo.title}"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:fontFamily="serif"
+        app:layout_constraintBottom_toTopOf="@+id/singleImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        tools:text="TEST" />
+
+    <Button
+        android:id="@+id/allImages"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ALL IMAGES"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="NEXT"
+        android:textColorLink="#00E23A3A"
+        app:layout_constraintBottom_toTopOf="@+id/allImages"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/singleImage"
+        android:layout_width="324dp"
+        android:layout_height="340dp"
+        android:layout_marginBottom="44dp"
+        android:scaleType="center"
+        app:layout_constraintBottom_toTopOf="@+id/next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
